@@ -53,6 +53,9 @@
 		outline:none;
 	}
 	
+	nav,ul, p{
+		overflow: hidden;
+	}
 	header{
 		background: #6ac4b8;
 	}
@@ -63,16 +66,16 @@
 		max-width: 960px;
 		margin:0 auto;
 	}
+	.block_row{
+		display:flex;
+		flex-direction: row; /*по умолч.*/
+	}
+/*Маленькое меню*/
 	.service_menu {
 		background: #8cd3c9 url("lap_header.png") -7px 1px repeat-x;
 		/*text-align: center;*/
 		justify-content: center;
 	}
-	.block_row{
-		display:flex;
-		flex-direction: row; /*по умолч.*/
-	}
-
 	.service_menu li{
 		padding-right: 15px;
 		position: relative;
@@ -121,6 +124,8 @@
 		bottom: 8px;
 		border-bottom: 1px solid #fff;
 	}
+
+/*Логотип, поиск и картинка*/
 	.container{
 		justify-content: space-between;
 	}
@@ -162,8 +167,7 @@
 		height: 30px;
 		background:#157d8c url("sprite_vertical.png") 0 -406px;
 		border:none;
-	/*	margin-left: 5px;
-*/	}
+	}
 	.container_for_image{
 		background:url("sprite_vertical.png") 0 -158px;
 		width: 18.229%;
@@ -171,6 +175,7 @@
 		margin: 10px 0 4px;
 	}
 
+/*Навигационное меню*/
 	header nav{
 		border-top: 1px solid #85e8db;
 		/*border-top: 1px solid #99dad2;*/
@@ -192,7 +197,6 @@
 		height: 18px;
 		background:url("sprite_vertical.png") -82px -275px;
 	}
-
 	nav ul li:first-child{
 		padding-left: 15px;
 	}
@@ -219,15 +223,17 @@
 	nav ul li:last-child a{
 	    padding: 0 18px 0 25px;
 	}
-	
-	main{
-		margin: 0 auto;
+
+/*Основной контент*/
+	main.block_row{
 		padding-top: 31px;
 		justify-content: space-between;
 	}
+/*Левая часть*/
 	main .container_for_news{
 		width: 65.625%;
 	}
+/*Левая часть СЛАЙДЕР*/	
 	main .slider_elem{
 		position: relative;
 	}
@@ -272,6 +278,7 @@
 		border-radius: 50%;
 		border:1px solid white;
 	}
+/*Левая часть СТАТЬИ*/
 	main section{
 		margin-top: 22px;
 		text-align: center;
@@ -346,11 +353,13 @@
 		width: 17px;
 		background:url("sprite_vertical.png") -32px -273px;
 	}
+
+/*Правая часть*/
 	main aside{
 		height: 810px;
 		width: 31.25%;
 	}
-	
+/*Правая часть ОПРОС*/
 	main aside .interview p{
 		font:bold 22px/39px 'Roboto Condensed';
 		color: #fff;
@@ -434,6 +443,8 @@
 		height: 16px;
 		background: url("sprite_vertical.png") -115px -273px;
 	}
+
+/*Правая часть ОБСУЖДЕНИЯ*/
 	.container_for_discus{
 		margin-top: 62px;
 	}
@@ -473,10 +484,11 @@
    		font: 18px/20px 'Roboto Condensed';
     	color: #383838;
 	}
+
+/*Советы*/
 	.container_for_advices{
 		background:#f3f3f3 url("lap_advice.png") 0 22px repeat-x;
 		text-align: center;
-
 	}
 	.container_for_advices h2{
 		font: bold 32px 'Roboto Condensed';
@@ -497,7 +509,7 @@
 		max-width: 100%;
 	}
 	.container_for_advices .all_advices .advice_elem:nth-child(2){
-		margin:0 30px;
+		/*margin:0 30px;*/
 	}
 	.container_for_advices .all_advices .advice_elem p{
 		position: absolute;
@@ -516,7 +528,9 @@
 		border-bottom: 1px solid #fff;
 		color: #fff;
 	}
-	.container_for_registration{
+
+/*Подписка*/
+	div.container_for_registration{
 		padding:30px 0 57px;
 	}
 	.container_for_registration h2{
@@ -553,9 +567,12 @@
 		color: #fff;
 		font:18px 'Roboto Condensed';
 	}
+
+/*Подвал*/
 	footer{
 		background: #157d8c;
 	}
+/*Навигационное меню*/
 	footer nav{	
 		border-bottom: 1px solid #85e8db;
 	}
@@ -571,15 +588,17 @@
 	footer .logo_sign:before{
 		background:url("sprite_vertical.png") 0px -326px;
 	}
+
+/*Логотип и картинка*/
 	footer .container_for_image_second{
 		margin-top: -8px;
 		background:url("sprite_vertical.png") -7px 0;
+		/*background-size:cover;*/
 		width: 37.083%;
 		height: 156px;
 	}
 	footer .soc_menu{
 		margin:30px 0 87px;
-		/*position: relative;*/
 	}
 	footer .soc_menu span{
 		font:16px/32px 'Roboto Condensed';
@@ -595,7 +614,7 @@
 		display: block;
 		position: absolute;
 		content: "";
-		top:0;
+		top:6px;
 		left: 3px;
 		width: 12px;
 		height: 14px;
@@ -606,7 +625,7 @@
 		display: block;
 		position: absolute;
 		content: "";
-		top:3px;
+		top:9px;
 		left: 7px;
 		width: 6px;
 		height: 8px;
@@ -615,11 +634,7 @@
 		border-bottom:1px solid #fff;
 		border-left:1px solid #fff;
 	}
-	.clearfix:after{
-		content: "";
-		display: block;
-		clear: both;
-	}
+	
 	footer .soc_menu a{
 		width: 32px;
 		height: 32px;
@@ -634,4 +649,50 @@
 	}
 	footer .soc_menu a+a+a{
 		background:url("sprite_vertical.png") -31px -296px;
+	}
+
+	.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+/*Медиазапросы*/
+	@media screen and (max-width: 992px){
+		.wrapper{
+			max-width: 920px;
+			margin:0 auto;
+			padding: 0 10px;
+		}
+		.container_for_image, .container_for_image_second{
+			display: none;
+		}
+		.search{
+			margin:49px 0 13px; 
+		}
+		nav ul {
+			justify-content: center;
+		}
+		nav ul li a, nav ul li:last-child a{
+			padding:0 5px;
+		}
+	}
+	@media screen and (max-width: 768px){
+		.wrapper{
+			max-width: 748px;
+			margin:0 auto;
+			padding: 0 10px;
+		}
+		
+		
+	}
+	@media screen and (max-width: 480px){
+		.wrapper{
+			max-width: 460px;
+			margin:0 auto;
+			padding: 0 10px;
+		}
+		.logo_sign img{
+			max-width: 100%;
+		}
 	}
