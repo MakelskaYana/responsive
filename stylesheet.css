@@ -175,6 +175,10 @@
 		margin: 10px 0 4px;
 	}
 
+	.burger{
+		display: none;
+	}
+
 /*Навигационное меню*/
 	header nav{
 		border-top: 1px solid #85e8db;
@@ -195,7 +199,7 @@
 		right: 0;
 		width: 17px;
 		height: 18px;
-		background:url("sprite_vertical.png") -82px -275px;
+		background:url("sprite_vertical.png") -81px -275px;
 	}
 	nav ul li:first-child{
 		padding-left: 15px;
@@ -211,7 +215,7 @@
 		left:0;
 		width: 18px;
 		height: 18px;
-		background:url("sprite_vertical.png") -82px -275px;
+		background:url("sprite_vertical.png") -81px -275px;
 	}
 	nav ul li a{
 		font:20px/53px 'Roboto Condensed',sans-serif;
@@ -655,10 +659,12 @@
 			content: "";
 			display: block;
 			clear: both;
-		}
+	}
+	body.mouse{
 
+	}
 /*Медиазапросы*/
-	@media screen and (max-width: 992px){
+	@media screen and (max-width: 991px){
 		.wrapper{
 			max-width: 920px;
 			margin:0 auto;
@@ -667,23 +673,154 @@
 		.container_for_image, .container_for_image_second{
 			display: none;
 		}
-		.search{
-			margin:49px 0 13px; 
+
+		.service_menu {
+			background: inherit;
+    		background-color:#8cd3c9;
+    	}
+		.container, .container_for_logo_second {
+			justify-content: space-around;
+			align-items: center;
 		}
+		.search h1 {
+   		font-size: 20px;
+   		}
 		nav ul {
 			justify-content: center;
 		}
 		nav ul li a, nav ul li:last-child a{
-			padding:0 5px;
+		padding: 0 5px;
 		}
 	}
-	@media screen and (max-width: 768px){
+	@media screen and (max-width: 767px){
+		body.lock{
+			overflow: hidden;
+		}
+		 aside{
+			display: none;
+		}
+		main .container_for_news {
+		    width: 100%;
+		}
+		main .slider_elem img {
+		    min-width: 100%;
+		}
+		main .slider_elem .controller li a{
+			width: 40px;
+			height: 40px;
+		}
 		.wrapper{
 			max-width: 748px;
 			margin:0 auto;
 			padding: 0 10px;
 		}
+		header {
+			position: fixed;
+			width: 100%;
+			top:0;
+			left: 0;
+			z-index: 50;
+		}
+		header:before {
+			content:" ";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left: 0;
+			z-index: 2;
+			background: #6ac4b8;
+		}
+		header .container .logo_sign,	header .container .search, .service_menu {
+			position: relative;
+			z-index: 3;
+		}
+		header .container .logo_sign,	header .container .search, footer .logo_sign, footer .soc_menu{
+			margin: 0;
+		}
+		header .container{
+			height: 111px;
+			border-bottom: 1px solid #85e8db;
+		}
 		
+		.burger{
+			display:block;
+			position: relative;
+			z-index: 3;
+			width: 40px;
+			height: 30px;
+			border-top:2px solid #fff;
+			border-bottom:2px solid #fff;
+			box-sizing: border-box;
+			transition: transform 0.3s ease;
+		}
+		.burger:before{
+			display:block;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #fff;
+			left: 0;
+			top:12px;
+			transition: transform 0.3s ease;
+		}
+		.burger.active{
+			border-top:2px solid #fff;
+			border-bottom:none;
+			transform: rotate(45deg) translate(0,12px);
+		}	
+		.burger.active:before{
+			transform: rotate(-90deg) translate(12px,0);
+			left: 0;
+			top:36%;
+		}
+		header nav ul.wrapper.block_row{
+			position: fixed;
+			top:-120%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #157d8c;
+			padding-top: 144px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			transition: top 0.3s ease;
+			overflow: auto;
+		}
+		header nav ul.wrapper.block_row.active{
+			top:0;
+		}
+		header nav ul.wrapper.block_row li{
+			margin-top: 20px;
+			padding-left:19px;
+		}
+		
+		nav ul li:before{
+		position: absolute;
+		display: block;
+		content: "";
+		top:17px;
+		left:0;
+		width: 18px;
+		height: 18px;
+		background:url("sprite_vertical.png") -81px -275px;
+	}
+		main.block_row{
+		padding-top: 170px;
+		}
+		footer nav{
+			display: none;
+		}
+		div.container_for_registration{
+			border-bottom: 1px solid #85e8db;
+		}
+		.logo_sign img{
+		max-width: 100%;
+		}
+	}
+	@media screen and (max-width: 620px){
 		
 	}
 	@media screen and (max-width: 480px){
@@ -692,7 +829,8 @@
 			margin:0 auto;
 			padding: 0 10px;
 		}
-		.logo_sign img{
-			max-width: 100%;
+		.all_advices{
+				flex-direction: column;
 		}
+		
 	}
