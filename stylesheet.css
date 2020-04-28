@@ -152,7 +152,7 @@
 		font: italic bold 22px 'Open Sans',sans-serif;
 	}
 	.search input[type="text"]{
-		width: 92%;
+		width: 412px;
 		height: 30px;
 		padding-left: 20px;
 		box-sizing: border-box;
@@ -163,7 +163,7 @@
 		font: 12px 'Open Sans',sans-serif;
 	}
 	.search input[type="submit"]{
-		width: 7%;
+		width: 30px;
 		height: 30px;
 		background:#157d8c url("sprite_vertical.png") 0 -406px;
 		border:none;
@@ -511,6 +511,7 @@
 	}
 	.container_for_advices .all_advices .advice_elem img{
 		max-width: 100%;
+		vertical-align: top;
 	}
 	.container_for_advices .all_advices .advice_elem:nth-child(2){
 		/*margin:0 30px;*/
@@ -531,6 +532,7 @@
 		font: 18px/24px 'Roboto Condensed';
 		border-bottom: 1px solid #fff;
 		color: #fff;
+
 	}
 
 /*Подписка*/
@@ -682,14 +684,18 @@
 			justify-content: space-around;
 			align-items: center;
 		}
-		.search h1 {
-   		font-size: 20px;
-   		}
+		
 		nav ul {
 			justify-content: center;
 		}
 		nav ul li a, nav ul li:last-child a{
 		padding: 0 5px;
+		}
+		main .slider_elem span{
+			font-size: 32px;
+		}
+		main .slider_elem span+span {
+			font-size: 36px;
 		}
 	}
 	@media screen and (max-width: 767px){
@@ -742,6 +748,7 @@
 			height: 111px;
 			border-bottom: 1px solid #85e8db;
 		}
+		
 		
 		.burger{
 			display:block;
@@ -806,7 +813,7 @@
 		width: 18px;
 		height: 18px;
 		background:url("sprite_vertical.png") -81px -275px;
-	}
+		}
 		main.block_row{
 		padding-top: 170px;
 		}
@@ -819,10 +826,31 @@
 		.logo_sign img{
 		max-width: 100%;
 		}
+		form{
+			text-align: center;
+		}
 	}
-	@media screen and (max-width: 620px){
-		
+	@media screen and (max-width: 650px){
+		form{
+			text-align: center;
+		}
+		.search input[type="text"]{
+		width: 250px;
+
+		}
 	}
+	@media screen and (max-width: 520px){
+		header .search h1,header .search span  {
+   		font-size: 20px;
+   		}
+   		main .slider_elem span{
+			font-size: 26px;
+		}
+		main .slider_elem span+span {
+			font-size: 30px;
+			top: 45px;
+		}
+   	}
 	@media screen and (max-width: 480px){
 		.wrapper{
 			max-width: 460px;
@@ -830,7 +858,35 @@
 			padding: 0 10px;
 		}
 		.all_advices{
-				flex-direction: column;
+			display: inline-flex;
+			flex-direction: column;
 		}
+		.all_advices .advice_elem{
+			margin-bottom: 10px;
+		}
+		.all_advices .advice_elem p{ 
 		
+		}
+		header .search h1,header .search span {
+			font-size: 16px;
+		}
+		main.wrapper h2, .container_for_advices h2, .wrapper.container_for_registration h2{
+			font: bold 21px 'Roboto Condensed';
+		}
+		.container_for_advices h2 {
+			display: block;
+		}
+		.container_for_registration form {
+			display: flex;
+			flex-direction: column;
+		}
+		.container_for_registration.wrapper form input {
+			width: 100%;
+			margin-bottom: 10px;
+
+		}
+	}
+
+	@media screen and (max-width: 440px){
+
 	}
