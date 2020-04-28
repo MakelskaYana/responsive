@@ -829,6 +829,16 @@
 		form{
 			text-align: center;
 		}
+		.container_for_registration form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.container_for_registration.wrapper form input {
+			width: 50%;
+			margin-bottom: 10px;
+			margin-right: 0px;
+		}
 	}
 	@media screen and (max-width: 650px){
 		form{
@@ -876,6 +886,7 @@
 		.container_for_advices h2 {
 			display: block;
 		}
+	
 		.container_for_registration form {
 			display: flex;
 			flex-direction: column;
@@ -883,7 +894,6 @@
 		.container_for_registration.wrapper form input {
 			width: 100%;
 			margin-bottom: 10px;
-
 		}
 	}
 
