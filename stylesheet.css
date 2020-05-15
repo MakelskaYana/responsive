@@ -112,8 +112,10 @@
 		display: block;
 		font: 14px/14px 'Open Sans',sans-serif ;
 		color: #fff;
-		padding:9px 18px;
+		padding: 9px calc(13px + 5 * ((100vw - 320px) / (1280 - 320)));
 		position: relative;
+		font-size: calc(10px + 4 * ((100vw - 320px) / (1280 - 320)));
+		line-height: calc(10px + 4 * ((100vw - 320px) / (1280 - 320)));
 	}
 	.service_menu a:after{
 		position: absolute;
@@ -137,6 +139,7 @@
 		font: bold 20px 'Roboto Condensed',sans-serif;
 		color:#157d8c;
 		margin: 3px 0 0 6px;
+		font-size: calc(15px + 5 * ((100vw - 320px) / (1280 - 320)));
 	}
 	.search{
 		color:#157d8c;
@@ -147,9 +150,11 @@
 		font: italic 22px 'Open Sans',sans-serif;
 		margin-bottom: 8px;
 		margin-left:-1px;
+		font-size: calc(16px + 6 * ((100vw - 320px) / (1280 - 320)));
 	}
 	.search h1 span{
 		font: italic bold 22px 'Open Sans',sans-serif;
+		font-size: calc(16px + 6 * ((100vw - 320px) / (1280 - 320)));
 	}
 	.search input[type="text"]{
 		width: 412px;
@@ -219,13 +224,16 @@
 	}
 	nav ul li a{
 		font:20px/53px 'Roboto Condensed',sans-serif;
+		font-size: calc(16px + 4 * ((100vw - 320px) / (1280 - 320)));
 		color: #fff;
 		display: block;
-		padding: 0 22.5px;
+		/*padding: 0 22.5px;*/
+		padding: 0 calc(2.5px + 20 * ((100vw - 320px) / (1280 - 320)));
 		white-space: nowrap;
 	}
 	nav ul li:last-child a{
-	    padding: 0 18px 0 25px;
+	  /*  padding: 0 18px 0 25px;*/
+	  padding: 0 calc(2px + 16 * ((100vw - 320px) / (1280 - 320))) 0 calc(2px + 23 * ((100vw - 320px) / (1280 - 320)));
 	}
 
 /*Основной контент*/
@@ -248,16 +256,21 @@
 		position: absolute;
 		content: "";
 		display: block;
-		left:39px;
-		top:21px;
+		left:calc(20px + 19 * ((100vw - 320px) / (1280 - 320)));
+		/*left:39px;*/
+		top:calc(11px + 10 * ((100vw - 320px) / (1280 - 320)));
+		/*top:21px;*/
 		text-transform: uppercase;
 		font:bold 37px 'Bebas Neue Cyrillic';
 		color:#fed34f;
+		font-size: calc(16px + 21 * ((100vw - 320px) / (1280 - 320)));
 	}
 	main .slider_elem span+span{
-		top:61px;
+		top:calc(31px + 30 * ((100vw - 320px) / (1280 - 320)));
+		/*top:61px;*/
 		font:bold 42px 'Bebas Neue Cyrillic';
 		color:#fff;
+		font-size: calc(18px + 24 * ((100vw - 320px) / (1280 - 320)));
 	}
 	main .slider_elem .controller{
 		position: absolute;
@@ -436,6 +449,7 @@
 		display: block;
 		padding-top: 32px;
 		position: relative;
+		font-size: calc(14px + 4 * ((100vw - 320px) / (1280 - 320)));
 	}
 	.interview ul li a:before{
 		position: absolute;
@@ -532,8 +546,9 @@
 		font: 18px/24px 'Roboto Condensed';
 		border-bottom: 1px solid #fff;
 		color: #fff;
-
-	}
+		font-size: calc(15px + 3 * ((100vw - 320px) / (1280 - 320)));
+		line-height: calc(17px + 7 * ((100vw - 320px) / (1280 - 320)));
+  	}
 
 /*Подписка*/
 	div.container_for_registration{
@@ -610,13 +625,16 @@
 		font:16px/32px 'Roboto Condensed';
 		color:#fff;
 		vertical-align: top;
-	}
-	footer .soc_menu span+span{
-		padding-left: 20px;
+		font-size: calc(10px + 6 * ((100vw - 320px) / (1280 - 320)));
+		line-height: calc(12px + 20 * ((100vw - 320px) / (1280 - 320)));
 		margin-right: 8px;
-		position: relative;
 	}
-	footer .soc_menu span+span:before{
+/*	footer .soc_menu span+span{
+		padding-left: 20px;
+		
+		position: relative;
+	}*/
+/*	footer .soc_menu span+span:before{
 		display: block;
 		position: absolute;
 		content: "";
@@ -626,8 +644,8 @@
 		height: 14px;
 		border-radius: 50%;
 		border:1px solid #fff;
-	}
-	footer .soc_menu span+span:after{
+	}*/
+/*	footer .soc_menu span+span:after{
 		display: block;
 		position: absolute;
 		content: "";
@@ -639,7 +657,7 @@
 		border-top:1px solid #fff;
 		border-bottom:1px solid #fff;
 		border-left:1px solid #fff;
-	}
+	}*/
 	
 	footer .soc_menu a{
 		width: 32px;
@@ -688,22 +706,21 @@
 		nav ul {
 			justify-content: center;
 		}
-		nav ul li a, nav ul li:last-child a{
-		padding: 0 5px;
-		}
-		main .slider_elem span{
-			font-size: 32px;
-		}
-		main .slider_elem span+span {
-			font-size: 36px;
-		}
+
 	}
 	@media screen and (max-width: 767px){
 		body.lock{
 			overflow: hidden;
 		}
-		 aside{
+		main.block_row {
+		flex-direction: column;
+		}
+		main aside{
 			display: none;
+			/*width: 50%;*/
+		}
+		main aside form{
+			text-align: left;
 		}
 		main .container_for_news {
 		    width: 100%;
@@ -711,10 +728,11 @@
 		main .slider_elem img {
 		    min-width: 100%;
 		}
-		main .slider_elem .controller li a{
+	/*	main .slider_elem .controller li a{
 			width: 40px;
 			height: 40px;
-		}
+		}*/
+
 		.wrapper{
 			max-width: 748px;
 			margin:0 auto;
@@ -748,7 +766,6 @@
 			height: 111px;
 			border-bottom: 1px solid #85e8db;
 		}
-		
 		
 		.burger{
 			display:block;
@@ -834,32 +851,29 @@
 			flex-direction: column;
 			align-items: center;
 		}
-		.container_for_registration.wrapper form input {
+		.container_for_registration form.registration input{
 			width: 50%;
 			margin-bottom: 10px;
+			margin-right: 0;
+		}
+
+		.search input[type="text"]{
+			width: 75%;
+			margin-bottom: 10px;
 			margin-right: 0px;
+		}
+		.container_for_article {
+			padding-left: 10px;
 		}
 	}
 	@media screen and (max-width: 650px){
 		form{
 			text-align: center;
 		}
-		.search input[type="text"]{
-		width: 250px;
-
-		}
+		
 	}
 	@media screen and (max-width: 520px){
-		header .search h1,header .search span  {
-   		font-size: 20px;
-   		}
-   		main .slider_elem span{
-			font-size: 26px;
-		}
-		main .slider_elem span+span {
-			font-size: 30px;
-			top: 45px;
-		}
+	
    	}
 	@media screen and (max-width: 480px){
 		.wrapper{
@@ -877,26 +891,37 @@
 		.all_advices .advice_elem p{ 
 		
 		}
-		header .search h1,header .search span {
-			font-size: 16px;
-		}
+	
 		main.wrapper h2, .container_for_advices h2, .wrapper.container_for_registration h2{
 			font: bold 21px 'Roboto Condensed';
 		}
 		.container_for_advices h2 {
 			display: block;
 		}
-	
-		.container_for_registration form {
-			display: flex;
+		.container_for_registration form.registration input{
+			width: 100%;
+		}
+		article.block_row{
 			flex-direction: column;
 		}
-		.container_for_registration.wrapper form input {
+		article.block_row div {
 			width: 100%;
-			margin-bottom: 10px;
+			text-align: center;
+		}
+		.container_for_advices .all_advices .advice_elem a {
+			font: 18px/24px 'Roboto Condensed';
 		}
 	}
 
 	@media screen and (max-width: 440px){
 
+
+	}
+	@media screen and (max-width: 320px){
+		.wrapper{
+			max-width: 300px;
+			margin:0 auto;
+			padding: 0 10px;
+		}
+		
 	}
